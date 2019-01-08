@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView txtHelloWorld;
     private TextView txtHiWorld;
+    private TextView txtAndroid;
     private boolean isHelloWorldShowing = true;
 
 
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
         txtHelloWorld = findViewById(R.id.txtHelloWorld);
         txtHiWorld = findViewById(R.id.txtHiWorld);
+        txtAndroid = findViewById(R.id.txtAndroid);
 
 
         txtHelloWorld.setOnClickListener(new View.OnClickListener() {
@@ -41,6 +43,14 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+            }
+        });
+
+        txtAndroid.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                txtAndroid.animate().translationXBy(3000).setDuration(2000);
+                txtAndroid.animate().rotation(7200).setDuration(2000);
             }
         });
 
